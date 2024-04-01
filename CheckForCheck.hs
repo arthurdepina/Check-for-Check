@@ -58,7 +58,7 @@ king_down_column board (row, col) = check_down row col
     check_down r c
       | piece == "t" || piece == "d" = True  -- Encontrou uma torre ou dama preta
       | piece /= " " && piece /= "R" = False -- Encontrou um peça que protege o rei
-      | otherwise = check_down (r+1) c         -- Continua a busca
+      | otherwise = check_down (r+1) c       -- Continua a busca
       where
         piece = (board !! r) !! c
 
